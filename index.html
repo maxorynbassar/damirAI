@@ -447,6 +447,59 @@
         </div>
       </div><!-- End Attendance Chart -->
 
+      <!-- Grades Table -->
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Grades for the Week</h5>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Student Name</th>
+                  <th scope="col">Monday</th>
+                  <th scope="col">Tuesday</th>
+                  <th scope="col">Wednesday</th>
+                  <th scope="col">Thursday</th>
+                  <th scope="col">Friday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Жапаров Дамир</td>
+                  <td>70%</td>
+                  <td>100%</td>
+                  <td>50%</td>
+                  <td>70%</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Нурболатов Нуртас</td>
+                  <td>50%</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                  <td>100%</td>
+                  <td>50%</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Майрашов Адайбек</td>
+                  <td>100%</td>
+                  <td>100%</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div><!-- End Grades Table -->
+
       <!-- Grades Chart -->
       <div class="col-lg-6">
         <div class="card">
@@ -494,7 +547,7 @@ const gradesChart = new Chart(ctxGrades, {
     labels: ['Excellent (100%)', 'Good (70%)', 'Satisfactory (50%)'],
     datasets: [{
       label: 'Grades Distribution',
-      data: [50, 30, 20], // Процентное распределение
+      data: [5, 6, 4], // Сумма количества оценок по процентам
       backgroundColor: ['#28a745', '#ffc107', '#dc3545'],
       hoverOffset: 10
     }]
