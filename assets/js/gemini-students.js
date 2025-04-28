@@ -1,7 +1,7 @@
 async function askGemini() {
   const prompt = document.getElementById("prompt").value;
 
-  const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBRmbpGTGiXeu4DHD93y0fWRxbwyE2_EPY', {
+  const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyB62YG6Z3ML1IDYiCwyQhfE6DMSj7vYJLk', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
