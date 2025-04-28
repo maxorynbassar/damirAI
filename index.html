@@ -311,7 +311,15 @@
     </li>
   </ul>
 </li><!-- End Journal Nav -->
-  
+  <div class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title">Сгенерировать базу студентов через Gemini AI</h5>
+    <input id="prompt" type="text" class="form-control mb-2" placeholder="Введите запрос, например: 'Сгенерируй 5 студентов с посещаемостью'">
+    <button id="submit" class="btn btn-primary">Сгенерировать</button>
+    <pre id="output" class="mt-3" style="background: #f8f9fa; padding: 10px;"></pre>
+  </div>
+</div>
+
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -564,6 +572,11 @@ const gradesChart = new Chart(ctxGrades, {
 </script>
 
     <script src="assets/js/gemini-students.js"></script>
+
+    <input id="prompt" type="text" placeholder="Введите запрос">
+<button id="submit">Отправить</button>
+<pre id="output"></pre>
+
 
 </body>
 
