@@ -1036,6 +1036,23 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script type="module">
+  import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+
+  const genAI = new GoogleGenerativeAI("AIzaSyDwrIG482yYtNuVikc6v6b5qVwxbMFoliw"); // <-- сюда свой API ключ
+
+  async function askGemini() {
+    const prompt = document.getElementById("prompt").value;
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    document.getElementById("output").innerText = text;
+  }
+
+  document.getElementById("submit").addEventListener("click", askGemini);
+</script>
+
 </body>
 
 </html>
