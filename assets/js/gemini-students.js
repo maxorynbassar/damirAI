@@ -26,10 +26,22 @@ async function askGemini() {
 }
 
 function showStudents(students) {
-  let html = "<table border='1'><tr><th>Имя</th><th>Посещаемость</th></tr>";
-  students.forEach(student => {
-    html += `<tr><td>${student.name}</td><td>${student.attendance.join(', ')}</td></tr>`;
+  const tbody = document.querySelector("table tbody"); // Ищем таблицу
+  tbody.innerHTML = ""; // Очищаем старые строки таблицы
+
+  students.forEach((student, index) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <th scope="row">${index + 1}</th>
+      <td>${student.name}</td>
+      <td>${student.attendance[0] ? '✔️' : '❌'}</td>
+      <td>${student.attendance[1] ? '✔️' : '❌'}</td>
+      <td>${student.attendance[2] ? '✔️' : '❌'}</td>
+      <td>${student.attendance[3] ? '✔️' : '❌'}</td>
+      <td>${student.attendance[4] ? '✔️' : '❌'}</td>
+    `;
+
+    tbody.appendChild(row);
   });
-  html += "</table>";
-  document.getElementById("output").innerHTML = html;
 }
