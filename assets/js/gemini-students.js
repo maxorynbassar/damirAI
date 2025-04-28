@@ -25,6 +25,9 @@ async function askGemini() {
   }
 }
 
+document.getElementById("submit").addEventListener("click", askGemini);
+
+
 function showStudents(students) {
   const tbody = document.querySelector("table tbody"); // Ищем таблицу
   tbody.innerHTML = ""; // Очищаем старые строки таблицы
