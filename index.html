@@ -299,24 +299,102 @@
         </ul>
       </li><!-- End Tables Nav -->
 
-    <li class="nav-item">
+   <li class="nav-item">
   <a class="nav-link collapsed" data-bs-target="#journal-nav" data-bs-toggle="collapse" href="#">
     <i class="bi bi-journal"></i><span>Journal</span><i class="bi bi-chevron-down ms-auto"></i>
   </a>
   <ul id="journal-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
     <li>
-      <a href="journal-usis-22-4.html">
-        <i class="bi bi-circle"></i><span>USIS-22-4</span>
-      </a>
-    </li>
-    <li>
-      <a href="journal-vtip-22-4.html">
-        <i class="bi bi-circle"></i><span>VTIPO-22-4</span>
+      <a href="#journal-tab-pane" data-bs-toggle="tab">
+        <i class="bi bi-circle"></i><span>Students Journal</span>
       </a>
     </li>
   </ul>
 </li><!-- End Journal Nav -->
-      
+      <div class="tab-pane fade show active" id="journal-tab-pane">
+  <div class="container mt-4">
+    <h2>Student Journal</h2>
+
+    <!-- Таблица студентов и посещаемости -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Жапаров Дамир</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Нурболатов Нуртас</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Майрашов Адайбек</td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Диаграмма посещаемости -->
+    <div class="mt-5">
+      <h4>Attendance Diagram</h4>
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('attendanceChart').getContext('2d');
+  const attendanceChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Жапаров Дамир', 'Нурболатов Нуртас', 'Майрашов Адайбек'],
+      datasets: [{
+        label: 'Days Attended',
+        data: [3, 3, 4],  // Количество дней посещения
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
