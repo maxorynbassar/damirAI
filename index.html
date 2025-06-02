@@ -462,7 +462,7 @@
       </div>
     </div><!-- End Grades Table -->
 
-     <!-- Attendance Chart -->
+   <!-- Attendance Chart -->
 <div class="col-lg-6">
   <div class="card">
     <div class="card-body">
@@ -472,6 +472,50 @@
   </div>
 </div><!-- End Attendance Chart -->
 
+<!-- Подключение Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('attendanceChart').getContext('2d');
+
+  const attendanceChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Жапаров Дамир', 'Нурболатов Нуртас', 'Майрашов Адайбек', 'Касымов Айбек', 'Ерланова Динара'],
+      datasets: [{
+        label: 'Посещаемость (%)',
+        data: [80, 70, 90, 85, 75], // примерные данные по посещаемости
+        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            callback: function(value) {
+              return value + '%';
+            }
+          }
+        }
+      },
+      responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+        },
+        title: {
+          display: false,
+          text: 'Overview of Attendance'
+        }
+      }
+    }
+  });
+</script>
 <!-- Grades Table -->
 <div class="col-lg-12">
   <div class="card">
