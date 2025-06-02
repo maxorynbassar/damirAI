@@ -366,63 +366,101 @@
 
   <div class="pagetitle">
     <h1>Students Journal</h1>
-  </div><!-- End Page Title -->
+</div><!-- End Page Title -->
 
-  <section class="section">
-    <div class="row">
+<section class="section">
+  <div class="row">
 
-      <!-- Table of Attendance -->
-      <div class="col-lg-12">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Attendance Table</h5>
+    <!-- Table of Attendance -->
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Attendance Table</h5>
 
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Student Name</th>
-                  <th scope="col">Monday</th>
-                  <th scope="col">Tuesday</th>
-                  <th scope="col">Wednesday</th>
-                  <th scope="col">Thursday</th>
-                  <th scope="col">Friday</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Жапаров Дамир</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                  <td>❌</td>
-                  <td>✔️</td>
-                  <td>❌</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Нурболатов Нуртас</td>
-                  <td>✔️</td>
-                  <td>❌</td>
-                  <td>✔️</td>
-                  <td>❌</td>
-                  <td>✔️</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Майрашов Адайбек</td>
-                  <td>❌</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                </tr>
-              </tbody>
-            </table>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Жапаров Дамир</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td></tr>
+              <tr><th scope="row">2</th><td>Нурболатов Нуртас</td><td>✔️</td><td>❌</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
+              <tr><th scope="row">3</th><td>Майрашов Адайбек</td><td>❌</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">4</th><td>Касымов Айбек</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
+              <tr><th scope="row">5</th><td>Ерланова Динара</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">6</th><td>Турсынов Руслан</td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
+              <tr><th scope="row">7</th><td>Сагынбекова Алия</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">8</th><td>Байжанов Ермек</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
+              <tr><th scope="row">9</th><td>Мухамеджанова Айсулу</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">10</th><td>Кайратов Марат</td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td></tr>
+              <tr><th scope="row">11</th><td>Серикова Назгуль</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
+              <tr><th scope="row">12</th><td>Аманжолов Тимур</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">13</th><td>Жумадилов Нурсултан</td><td>✔️</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">14</th><td>Курманов Айдар</td><td>❌</td><td>✔️</td><td>✔️</td><td>✔️</td><td>✔️</td></tr>
+              <tr><th scope="row">15</th><td>Есенгельдиева Гульмира</td><td>✔️</td><td>❌</td><td>✔️</td><td>✔️</td><td>❌</td></tr>
+            </tbody>
+          </table>
 
-          </div>
         </div>
-      </div><!-- End Attendance Table -->
+      </div>
+    </div><!-- End Attendance Table -->
+
+    <!-- Attendance Chart -->
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Attendance Overview</h5>
+          <canvas id="attendanceChart" style="max-height: 400px;"></canvas>
+        </div>
+      </div>
+    </div><!-- End Attendance Chart -->
+
+    <!-- Grades Table -->
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Grades for the Week</h5>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>Жапаров Дамир</td><td>70%</td><td>100%</td><td>50%</td><td>70%</td><td>100%</td></tr>
+              <tr><th scope="row">2</th><td>Нурболатов Нуртас</td><td>50%</td><td>70%</td><td>70%</td><td>100%</td><td>50%</td></tr>
+              <tr><th scope="row">3</th><td>Майрашов Адайбек</td><td>100%</td><td>100%</td><td>70%</td><td>70%</td><td>70%</td></tr>
+              <tr><th scope="row">4</th><td>Касымов Айбек</td><td>80%</td><td>90%</td><td>85%</td><td>70%</td><td>95%</td></tr>
+              <tr><th scope="row">5</th><td>Ерланова Динара</td><td>75%</td><td>60%</td><td>80%</td><td>90%</td><td>85%</td></tr>
+              <tr><th scope="row">6</th><td>Турсынов Руслан</td><td>65%</td><td>70%</td><td>60%</td><td>55%</td><td>75%</td></tr>
+              <tr><th scope="row">7</th><td>Сагынбекова Алия</td><td>90%</td><td>85%</td><td>60%</td><td>70%</td><td>80%</td></tr>
+              <tr><th scope="row">8</th><td>Байжанов Ермек</td><td>50%</td><td>60%</td><td>70%</td><td>75%</td><td>65%</td></tr>
+              <tr><th scope="row">9</th><td>Мухамеджанова Айсулу</td><td>100%</td><td>95%</td><td>90%</td><td>85%</td><td>100%</td></tr>
+              <tr><th scope="row">10</th><td>Кайратов Марат</td><td>55%</td><td>70%</td><td>65%</td><td>60%</td><td>70%</td></tr>
+              <tr><th scope="row">11</th><td>Серикова Назгуль</td><td>80%</td><td>85%</td><td>90%</td><td>95%</td><td>60%</td></tr>
+              <tr><th scope="row">12</th><td>Аманжолов Тимур</td><td>70%</td><td>60%</td><td>75%</td><td>80%</td><td>90%</td></tr>
+              <tr><th scope="row">13</th><td>Жумадилов Нурсултан</td><td>85%</td><td>90%</td><td>55%</td><td>70%</td><td>85%</td></tr>
+              <tr><th scope="row">14</th><td>Курманов Айдар</td><td>60%</td><td>75%</td><td>80%</td><td>85%</td><td>90%</td></tr>
+              <tr><th scope="row">15</th><td>Есенгельдиева Гульмира</td><td>95%</td><td>65%</td><td>70%</td><td>75%</td><td>60%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div><!-- End Grades Table -->
 
       <!-- Attendance Chart -->
       <div class="col-lg-6">
